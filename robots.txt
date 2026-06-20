@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://commercialroofingcladding.co.uk/sitemap.xml
