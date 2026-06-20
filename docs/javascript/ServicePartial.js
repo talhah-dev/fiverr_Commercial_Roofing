@@ -14,7 +14,7 @@ if (servicePartials.length) {
       <div class="relative h-[17.5rem] w-full overflow-hidden sm:h-[19rem]">
         <img src="${escapeHtml(card.image)}"
           width="1170" height="780" alt="${escapeHtml(card.alt)}"
-          class="absolute inset-0 h-full w-full object-cover" />
+          class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
         ${card.detailKey ? `
           <button
             type="button"

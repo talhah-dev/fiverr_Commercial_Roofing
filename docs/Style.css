@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    outline: none;
     scroll-behavior: auto;
     font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -12,6 +11,34 @@ button,
 iframe,
 a {
     user-select: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #2c4a80;
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem;
+    z-index: 1000;
+    transform: translateY(-160%);
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #1f3b6d;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
 }
 
 .fadeIn {

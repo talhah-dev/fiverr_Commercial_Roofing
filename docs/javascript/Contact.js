@@ -132,7 +132,7 @@ if (contact) {
                                             <img src="${escapeHtml(contactConfig.imageSrc)}"
                                                 width="1172" height="781"
                                                 alt="${escapeHtml(contactConfig.imageAlt)}"
-                                                class="mx-auto h-auto w-full" />
+                                                class="mx-auto h-auto w-full" loading="lazy" decoding="async" />
 
                                             <button type="button"
                                             class="group absolute left-[52%] top-[55%] h-10 w-10 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10 hover:z-50 group-hover:z-50"
