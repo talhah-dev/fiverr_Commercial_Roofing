@@ -128,7 +128,7 @@ if (supportStagesRoots.length) {
   };
 
   const renderStage = (stage) => `
-    <article class="group relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white/95 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+    <article class="group relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white/95 p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:p-5">
       <div class="pointer-events-none absolute inset-x-0 top-0 h-1.5" style="background:${escapeHtml(
         stage.color
       )}"></div>
@@ -145,15 +145,15 @@ if (supportStagesRoots.length) {
           <p class="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">Stage ${escapeHtml(
             stage.number
           )}</p>
-          <p class="mt-1 text-lg font-semibold leading-tight text-slate-900">${escapeHtml(stage.title)}</p>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">${escapeHtml(stage.text)}</p>
+          <p class="mt-1 text-base font-semibold leading-tight text-slate-900 sm:text-lg">${escapeHtml(stage.title)}</p>
+          <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">${escapeHtml(stage.text)}</p>
         </div>
       </div>
     </article>
   `;
 
   const renderSupportStages = (config) => `
-    <section class="relative overflow-hidden bg-white py-8 sm:py-10">
+    <section class="relative overflow-hidden bg-white py-6 sm:py-10">
       <div class="absolute inset-0 -z-10">
         <div class="absolute -top-24 right-10 h-72 w-72 rounded-full bg-[#2c4a80]/10 blur-3xl"></div>
         <div class="absolute -bottom-24 left-10 h-72 w-72 rounded-full bg-[#52b69a]/10 blur-3xl"></div>
@@ -165,11 +165,11 @@ if (supportStagesRoots.length) {
             <i class="${escapeHtml(config.eyebrowIcon)}"></i>
             <span class="text-sm font-semibold tracking-wide">${escapeHtml(config.eyebrow)}</span>
           </div>
-          <h2 class="mt-4 text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl">${escapeHtml(config.title)}</h2>
-          <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">${escapeHtml(config.intro)}</p>
+          <h2 class="mt-3 text-2xl font-semibold leading-tight text-slate-900 sm:mt-4 sm:text-4xl">${escapeHtml(config.title)}</h2>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">${escapeHtml(config.intro)}</p>
         </div>
 
-        <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="mt-7 grid gap-3 sm:mt-10 sm:grid-cols-2 xl:grid-cols-4">
           ${config.stages.map(renderStage).join("")}
         </div>
       </div>
